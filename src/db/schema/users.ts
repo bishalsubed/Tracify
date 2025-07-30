@@ -21,5 +21,5 @@ export const userRelations = relations(Users, ({ many }) => ({
     tasks: many(Tasks)
 }))
 
-export type SelectTask2 = InferSelectModel<typeof Users>;
-export type InsertTask2 = InferInsertModel<typeof Users>;
+export type SelectUser = InferSelectModel<typeof Users>;
+export type InsertUser = InferInsertModel<typeof Users>;
