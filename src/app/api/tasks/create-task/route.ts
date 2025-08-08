@@ -3,7 +3,6 @@ import { Tasks, InsertTask } from "@/db/schema/tasks";
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 import jwt from "next-auth/jwt"
-import { authOptions } from "@/lib/auth";
 
 const secret = process.env.NEXTAUTH_SECRET;
 
@@ -45,10 +44,13 @@ export async function POST(req: NextRequest) {
         const db = await connectDB();
 
         const token = await jwt.getToken({ req, secret })
+        if (!token || !token.id) {
+            return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+        }
 
         type NewTask = InsertTask
         const newTask = await db.insert(Tasks).values({
-            userId: token?.id as Number,
+            userId: Number(token?.id),
             title,
             description,
             completed: false,
@@ -68,7 +70,7 @@ export async function POST(req: NextRequest) {
         return NextResponse.json(
             {
                 message: "Task registered successfully",
-                user: newTask[0],
+                user: newTask,
             },
             { status: 201 },
         );
