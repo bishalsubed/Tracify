@@ -17,14 +17,14 @@ import {
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col bg-white dark:bg-gray-950">
+    <div className="flex min-h-screen flex-col bg-white dark:bg-gray-950 mx-3">
       <header className="sticky top-0 z-50 w-full border-b bg-white/80 dark:bg-gray-950/80 backdrop-blur-xl">
         <div className="container flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 shadow-lg">
               <Clock className="h-5 w-5 text-white" />
             </div>
-            <span className="text-xl font-bold text-gray-900 dark:text-white">TimeTrackr</span>
+            <span className="text-xl font-bold text-gray-900 dark:text-white">Tracify</span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
@@ -51,19 +51,17 @@ export default function Home() {
           <div className="flex items-center gap-4">
             <ThemeToggle />
             <Button variant="ghost" asChild className="hidden sm:flex">
-              <Link href="/auth/login">Sign In</Link>
+              <Link href="/login">Sign In</Link>
             </Button>
             <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white shadow-lg">
-              <Link href="/auth/register">Get Started</Link>
+              <Link href="/register">Get Started</Link>
             </Button>
           </div>
         </div>
       </header>
 
       <main className="flex-1">
-        {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-b from-blue-50 via-white to-gray-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900 py-20 lg:py-32">
-          {/* Background decoration */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute -top-40 -right-32 w-80 h-80 bg-blue-400/20 rounded-full blur-3xl"></div>
             <div className="absolute -bottom-40 -left-32 w-80 h-80 bg-purple-400/20 rounded-full blur-3xl"></div>
@@ -128,7 +126,7 @@ export default function Home() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <Button size="lg" asChild className="bg-blue-600 hover:bg-blue-700 text-white shadow-xl">
-                  <Link href="/auth/register">
+                  <Link href="/register">
                     Start Free Trial
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
@@ -159,7 +157,7 @@ export default function Home() {
               </div>
             </div>
 
-\            <div className="mt-16 mx-auto max-w-5xl">
+            <div className="mt-16 mx-auto max-w-5xl">
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl blur-2xl opacity-20"></div>
                 <div className="relative rounded-2xl border bg-white dark:bg-gray-900 shadow-2xl overflow-hidden">
@@ -169,17 +167,16 @@ export default function Home() {
                       <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                       <div className="w-3 h-3 rounded-full bg-green-500"></div>
                     </div>
-                    <div className="text-sm text-gray-500 dark:text-gray-400 ml-2">TimeTrackr Demo</div>
+                    <div className="text-sm text-gray-500 dark:text-gray-400 ml-2">Tracify Demo</div>
                   </div>
                   <div className="relative aspect-video bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950/20 dark:to-purple-950/20">
-                    {/* Placeholder video demo */}
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-center p-8">
                         <div className="w-20 h-20 mx-auto mb-6 bg-blue-100 dark:bg-blue-900/20 rounded-full flex items-center justify-center animate-pulse">
                           <Clock className="w-10 h-10 text-blue-600 dark:text-blue-400" />
                         </div>
                         <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
-                          See TimeTrackr in Action
+                          See Tracify in Action
                         </h3>
                         <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-md">
                           Watch how easy it is to manage tasks, track habits, and boost your productivity with our
@@ -308,12 +305,12 @@ export default function Home() {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">Trusted by thousands</h2>
               <p className="text-blue-100 max-w-2xl mx-auto">
-                Join the community of productive people who have transformed their workflow with TimeTrackr
+                Join the community of productive people who have transformed their workflow with Tracify
               </p>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 transform transition-all hover:scale-105 hover:bg-white/15">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 transform transition-all hover:scale-105 hover:bg-white/15 mx-3">
                 <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/20 mb-4">
                   <Users className="h-6 w-6 text-white" />
                 </div>
@@ -351,13 +348,13 @@ export default function Home() {
         <section id="about" className="py-20 lg:py-32 bg-gray-50 dark:bg-gray-900">
           <div className="container">
             <div className="grid gap-12 lg:grid-cols-2 items-center">
-              <div>
+              <div className="ml-2">
                 <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl mb-6">
                   Built for modern productivity
                 </h2>
                 <div className="space-y-4 text-lg text-gray-600 dark:text-gray-300">
                   <p>
-                    TimeTrackr isn't just another task manager. It's a comprehensive productivity system designed to
+                    Tracify isn't just another task manager. It's a comprehensive productivity system designed to
                     help you build better habits and achieve meaningful goals.
                   </p>
                   <p>
@@ -418,14 +415,14 @@ export default function Home() {
                 Ready to transform your productivity?
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-                Join thousands of users who have already improved their productivity with TimeTrackr.
+                Join thousands of users who have already improved their productivity with Tracify.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" asChild className="bg-blue-600 hover:bg-blue-700 text-white shadow-lg">
-                  <Link href="/auth/register">Get Started Free</Link>
+                  <Link href="/register">Get Started Free</Link>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
-                  <Link href="/auth/login">Sign In</Link>
+                  <Link href="/login">Sign In</Link>
                 </Button>
               </div>
             </div>
@@ -436,12 +433,12 @@ export default function Home() {
       <footer className="border-t bg-gray-50 dark:bg-gray-900 py-12">
         <div className="container">
           <div className="grid gap-8 md:grid-cols-4">
-            <div>
+            <div className="mx-4">
               <Link href="/" className="flex items-center gap-2 mb-4">
                 <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600">
                   <Clock className="h-5 w-5 text-white" />
                 </div>
-                <span className="text-xl font-bold text-gray-900 dark:text-white">TimeTrackr</span>
+                <span className="text-xl font-bold text-gray-900 dark:text-white">Tracify</span>
               </Link>
               <p className="text-gray-600 dark:text-gray-300 mb-4">
                 The ultimate productivity companion for achieving your goals.
@@ -539,9 +536,9 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center">
+          <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center mx-4">
             <p className="text-gray-600 dark:text-gray-300">
-              © {new Date().getFullYear()} TimeTrackr. All rights reserved.
+              © {new Date().getFullYear()} Tracify. All rights reserved.
             </p>
             <div className="flex items-center gap-4 mt-4 md:mt-0">
               <Link href="#" className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400">
