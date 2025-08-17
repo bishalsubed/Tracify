@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TimeTrackr - Track Your Productivity",
+  title: "Tracify - Track Your Productivity",
   description: "A modern time tracking application to boost your productivity",
 };
 
