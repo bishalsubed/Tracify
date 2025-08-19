@@ -127,12 +127,12 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <Button size="lg" asChild className="bg-blue-600 hover:bg-blue-700 text-white shadow-xl">
                   <Link href="/register">
-                    Start Free Trial
+                    Register
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
-                  <Link href="#demo">Watch Demo</Link>
+                  <Link href="/login">Login</Link>
                 </Button>
               </div>
 
@@ -157,72 +157,6 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="mt-16 mx-auto max-w-5xl">
-              <div className="relative">
-                <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl blur-2xl opacity-20"></div>
-                <div className="relative rounded-2xl border bg-white dark:bg-gray-900 shadow-2xl overflow-hidden">
-                  <div className="bg-gray-50 dark:bg-gray-800 px-4 py-3 border-b flex items-center gap-2">
-                    <div className="flex gap-1.5">
-                      <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                      <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                      <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                    </div>
-                    <div className="text-sm text-gray-500 dark:text-gray-400 ml-2">Tracify Demo</div>
-                  </div>
-                  <div className="relative aspect-video bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-950/20 dark:to-purple-950/20">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-center p-8">
-                        <div className="w-20 h-20 mx-auto mb-6 bg-blue-100 dark:bg-blue-900/20 rounded-full flex items-center justify-center animate-pulse">
-                          <Clock className="w-10 h-10 text-blue-600 dark:text-blue-400" />
-                        </div>
-                        <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
-                          See Tracify in Action
-                        </h3>
-                        <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-md">
-                          Watch how easy it is to manage tasks, track habits, and boost your productivity with our
-                          intuitive dashboard.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                          <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white">
-                            <Link href="/auth/register">Try Live Demo</Link>
-                          </Button>
-                          <Button variant="outline" asChild>
-                            <Link href="/dashboard">View Dashboard</Link>
-                          </Button>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="absolute top-4 left-4 bg-white dark:bg-gray-800 rounded-lg p-3 shadow-lg animate-fade-in">
-                      <div className="flex items-center gap-2 text-sm">
-                        <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                        <span className="text-gray-700 dark:text-gray-300">Task completed!</span>
-                      </div>
-                    </div>
-
-                    <div
-                      className="absolute top-4 right-4 bg-white dark:bg-gray-800 rounded-lg p-3 shadow-lg animate-slide-in"
-                      style={{ animationDelay: "1s" }}
-                    >
-                      <div className="flex items-center gap-2 text-sm">
-                        <Flame className="w-4 h-4 text-orange-500" />
-                        <span className="text-gray-700 dark:text-gray-300">7-day streak!</span>
-                      </div>
-                    </div>
-
-                    <div
-                      className="absolute bottom-4 left-4 bg-white dark:bg-gray-800 rounded-lg p-3 shadow-lg animate-bounce-slow"
-                      style={{ animationDelay: "2s" }}
-                    >
-                      <div className="flex items-center gap-2 text-sm">
-                        <BarChart2 className="w-4 h-4 text-purple-500" />
-                        <span className="text-gray-700 dark:text-gray-300">Analytics updated</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </section>
 
